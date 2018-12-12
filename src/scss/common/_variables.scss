@@ -1,0 +1,78 @@
+// Base urls
+
+$img-path-timeline-ui: '../../assets/ui/';
+$img-path-timeline: '../../assets/images/';
+$img-path-jogo: '../../assets/jogo-do-mix/ui/';
+$font-path: '../../assets/fonts';
+$img-logo: '../../assets/logos/';
+
+
+// Colors
+$white: #fff;
+$black: #000;
+
+$gray: #9b9999 ;
+$light-gray: #cccccc ;
+
+$orange: #FCCC10 ;
+$unsaturated-orange: #FCCC10;
+$border-orange: #DDAE00;
+$medium-orange: #DDAE00;
+$light-orange: #212E62 ;
+$beige: #f5f4ec;
+$light-brown: #b8510c;
+$brown: #533019 ;
+$dark-brown: #543019;
+
+$controls-size: 16px;
+
+$margin-start: 20px;
+$half-margin-start: $margin-start / 2;
+
+// Center top
+@mixin center-top {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); 
+}
+
+// Play and pause button
+@mixin show-button {
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+@mixin hide-button {
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+@mixin user-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently not supported by any browser */
+}
+
+@mixin ruler-point {
+  height: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  background-color: $orange;
+  content: "";
+  position: absolute;
+}
+
+// Responsive
+@function responsive($value1, $value2, $width1, $width2) {
+  $x1: $width1;
+  $x2: $width2;
+  $y1: $value1;
+  $y2: $value2;
+  $a: ($y2 - $y1) / ($x2 - $x1);
+  $b: ($x2 * $y1 - $x1 * $y2) / ($x2 - $x1);
+  @return calc(#{$a * 100vw} + #{$b * 1px});
+}

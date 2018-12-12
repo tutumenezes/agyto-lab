@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	  <meta charset="utf-8"/>
+	  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	  <title>Jogo de mix</title>
+	  <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+
+	<body id='main-jogo-timeline-biografia'>
+		<div id="jogo-do-mix">
+			<header class="header">
+				<div class='menu'>
+				<!-- @@include('includes/menu.html') -->
+				</div>
+			</header>
+			<div class="game_container">
+				<div class="content">
+					<div class="controls">
+						<ul>
+							<li class="legend">
+								<pt>AgytoLab - Teste v0.01</pt>
+							</li>
+							<li>
+								<p>
+									<pt class='instrument1'>Violoncelo</pt>
+								</p>
+								@@include('includes/controls_volume.html')
+							</li>
+							<li>
+								<p>
+									<pt class='instrument2'>Harmônica</pt>
+								</p>
+								@@include('includes/controls_volume.html')
+							</li>
+							<li>
+								<p>
+									<pt class='instrument3'>Piano</pt>
+								</p>
+								@@include('includes/controls_volume.html')
+							</li>
+							<li>
+								<p>
+									<pt class='instrument4'>Piano</pt>
+								</p>
+								@@include('includes/controls_volume.html')
+							</li>
+						</ul>
+					</div>
+					<div class="game">
+						<div class="videos">
+							<video id="video1"></video>
+							<video id="video2"></video>
+							<video id="video3"></video>
+							<video id="video4"></video>
+						</div>
+						@@include('includes/btns.html')
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+	
+</html>

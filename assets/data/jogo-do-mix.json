@@ -1,13 +1,15 @@
 [
 	{
-		"musica": "Tamanquinho",
+		"musica": "Tamancada",
 		"id": "odeon",
 		"compositor": "Levada",
-		"video1": "odeon-violao.mp4",
-		"video1Instrumento": "Violão - Pedro Prata",
-		"video2": "odeon-percussao.mp4",
-		"video2Instrumento": "Percussão - Leon",
-		"video3": "odeon-cravo.mp4",
-		"video3Instrumento": "Cravo - Pedro Amparo"
+		"video1": "teste-cymbals.mp4",
+		"video1Instrumento": "Barulho - Tutu Menezes",
+		"video2": "teste-claps.mp4",
+		"video2Instrumento": "Palminhas - Arthur Menezes",
+		"video3": "teste-snares.mp4",
+		"video3Instrumento": "Sei lá - Arturo",
+		"video4": "teste-hihat.mp4",
+		"video4Instrumento": "Cigarro e Hi-Hat - Tuzão"
 	}
 ]

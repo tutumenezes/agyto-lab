@@ -1,0 +1,89 @@
+.game_container {
+	padding: 50px 20px;
+	display: flex;
+	overflow: hidden;
+	max-width: 1000px;
+	margin: 0 auto;
+	background-color: $light-orange;
+  @media(min-width: 700px) {
+    justify-content:center;
+    padding: 50px;
+  }
+	.content {	
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@media(min-width: 500px) { flex-direction: row; }
+    @media(min-width: 700px) { flex-direction: column; }
+    @media(min-width: 900px) {
+    	flex-direction: row; 
+    	width: 100%;
+    }
+		.game {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: 100%;
+			justify-content: space-between;
+			margin: 20px 0 0;
+			width: 100%;
+			@media(min-width: 500px) { margin: 0; }
+			@media(min-width: 700px) { margin: 20px 0 0; }
+	    @media(min-width: 900px) { margin: 0; width: 50%;}
+
+			.videos {
+				background-color: black;
+				display: flex;
+				//flex-direction: column;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+			.btns {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				margin: 10px 0 0;
+				@media(min-width: 700px) {
+			    margin: 20px 0 0;
+			  }
+				button {
+					color: $white;
+					margin: 0 11px;
+					display: block;
+					font-weight: bold;
+					height: responsive(30, 40, 320, 800);
+			    width: responsive(30, 40, 320, 800);
+			    max-height: 40px;
+			    max-width:  40px;
+					background-color: $orange;
+					background-size: 50%;
+					background-repeat: no-repeat;
+					background-position: center;
+					position: relative;
+					border-right: 3px solid $border-orange;
+					border-bottom: 3px solid $border-orange;
+					svg {
+						position: absolute;
+						fill: $white;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						height: responsive(15, 20, 320, 800);
+				    width: responsive(15, 20, 320, 800);
+				    max-height: 20px;
+				    max-width:  20px;
+					}
+				}
+				.pause {
+					#pause { @include show-button; }
+					#play { @include hide-button; }
+				}
+				.play {
+					#play { @include show-button; }
+					#pause { @include hide-button; }
+				}
+			}
+		}
+	}
+}

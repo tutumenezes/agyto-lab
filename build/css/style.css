@@ -1,0 +1,250 @@
+@font-face {
+  font-family: 'lora-regular';
+  src: url(../../assets/fonts/Lora-Regular.woff), url(../../assets/fonts/Lora-Regular.woff2);
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto-bold';
+  src: url(../../assets/fonts/Roboto-Bold.woff), url(../../assets/fonts/Roboto-Bold.woff2);
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'rubik-medium';
+  src: url(../../assets/fonts/Rubik-Medium.woff), url(../../assets/fonts/Rubik-Medium.woff2);
+  font-weight: normal;
+  font-style: normal; }
+
+#jogo-do-mix {
+  /* Default */
+  min-height: 100vh;
+  height: 100%; }
+  #jogo-do-mix .controls {
+    font-size: 14px;
+    width: 100%; }
+    @media (min-width: 500px) {
+      #jogo-do-mix .controls {
+        margin: 0 10px 0 0; } }
+    @media (min-width: 900px) {
+      #jogo-do-mix .controls {
+        width: 40%; } }
+    #jogo-do-mix .controls ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      @media (min-width: 500px) {
+        #jogo-do-mix .controls ul {
+          flex-direction: column;
+          height: calc(100% - 60px); } }
+      #jogo-do-mix .controls ul li {
+        display: flex;
+        align-items: flex-start;
+        margin: 0 0 30px; }
+        #jogo-do-mix .controls ul li:last-child {
+          margin: 0px; }
+        @media (min-width: 500px) {
+          #jogo-do-mix .controls ul li {
+            flex-direction: column; } }
+        #jogo-do-mix .controls ul li p {
+          width: 35%;
+          color: #FCCC10;
+          font-family: 'rubik-medium';
+          font-size: calc(0.44118vw + 8.58824px); }
+          @media (min-width: 500px) {
+            #jogo-do-mix .controls ul li p {
+              width: 100%;
+              margin: 0 0 5px; } }
+        #jogo-do-mix .controls ul li .volume {
+          position: relative;
+          height: 16px;
+          width: 100%; }
+        #jogo-do-mix .controls ul li .vol_bar {
+          width: 100%;
+          height: 16px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: #cccccc; }
+          #jogo-do-mix .controls ul li .vol_bar .bar {
+            display: block;
+            height: 16px;
+            width: 100%;
+            background-color: #FCCC10;
+            transition: width .2s; }
+          #jogo-do-mix .controls ul li .vol_bar .drag {
+            height: 16px;
+            width: 16px;
+            background-color: #DDAE00;
+            left: calc(100% - 15px);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: left .2s; }
+        #jogo-do-mix .controls ul li input {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100%;
+          z-index: 9;
+          opacity: 0; }
+        #jogo-do-mix .controls ul li.legend {
+          color: #FCCC10;
+          font-size: calc(0.58824vw + 10.11765px);
+          line-height: 1.2em;
+          font-family: 'rubik-medium';
+          margin: 0 0 10px; }
+  #jogo-do-mix .game_container {
+    padding: 50px 20px;
+    display: flex;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #212E62; }
+    @media (min-width: 700px) {
+      #jogo-do-mix .game_container {
+        justify-content: center;
+        padding: 50px; } }
+    #jogo-do-mix .game_container .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      @media (min-width: 500px) {
+        #jogo-do-mix .game_container .content {
+          flex-direction: row; } }
+      @media (min-width: 700px) {
+        #jogo-do-mix .game_container .content {
+          flex-direction: column; } }
+      @media (min-width: 900px) {
+        #jogo-do-mix .game_container .content {
+          flex-direction: row;
+          width: 100%; } }
+      #jogo-do-mix .game_container .content .game {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        justify-content: space-between;
+        margin: 20px 0 0;
+        width: 100%; }
+        @media (min-width: 500px) {
+          #jogo-do-mix .game_container .content .game {
+            margin: 0; } }
+        @media (min-width: 700px) {
+          #jogo-do-mix .game_container .content .game {
+            margin: 20px 0 0; } }
+        @media (min-width: 900px) {
+          #jogo-do-mix .game_container .content .game {
+            margin: 0;
+            width: 50%; } }
+        #jogo-do-mix .game_container .content .game .videos {
+          background-color: black;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between; }
+        #jogo-do-mix .game_container .content .game .btns {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin: 10px 0 0; }
+          @media (min-width: 700px) {
+            #jogo-do-mix .game_container .content .game .btns {
+              margin: 20px 0 0; } }
+          #jogo-do-mix .game_container .content .game .btns button {
+            color: #fff;
+            margin: 0 11px;
+            display: block;
+            font-weight: bold;
+            height: calc(2.08333vw + 23.33333px);
+            width: calc(2.08333vw + 23.33333px);
+            max-height: 40px;
+            max-width: 40px;
+            background-color: #FCCC10;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            border-right: 3px solid #DDAE00;
+            border-bottom: 3px solid #DDAE00; }
+            #jogo-do-mix .game_container .content .game .btns button svg {
+              position: absolute;
+              fill: #fff;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              height: calc(1.04167vw + 11.66667px);
+              width: calc(1.04167vw + 11.66667px);
+              max-height: 20px;
+              max-width: 20px; }
+          #jogo-do-mix .game_container .content .game .btns .pause #pause {
+            opacity: 1;
+            transition: opacity .5s; }
+          #jogo-do-mix .game_container .content .game .btns .pause #play {
+            opacity: 0;
+            transition: opacity .5s; }
+          #jogo-do-mix .game_container .content .game .btns .play #play {
+            opacity: 1;
+            transition: opacity .5s; }
+          #jogo-do-mix .game_container .content .game .btns .play #pause {
+            opacity: 0;
+            transition: opacity .5s; }
+  #jogo-do-mix .menu {
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 1100px;
+    width: 100%;
+    margin: 20px auto;
+    font-family: 'lora-regular';
+    padding: 0 20px; }
+    @media (min-width: 1000px) {
+      #jogo-do-mix .menu {
+        display: flex;
+        margin: 50px auto 40px;
+        padding: 0; } }
+    #jogo-do-mix .menu .song {
+      width: 100%;
+      text-align: left;
+      color: #533019;
+      position: relative;
+      margin-bottom: 20px;
+      font-size: calc(0.58824vw + 10.11765px);
+      line-height: calc(1.47059vw + 15.29412px);
+      padding-bottom: 8px; }
+      @media (min-width: 1000px) {
+        #jogo-do-mix .menu .song {
+          font-size: 16px;
+          line-height: 30px;
+          padding-bottom: 20px;
+          text-align: center; }
+          #jogo-do-mix .menu .song .music {
+            display: block;
+            margin-left: 0; } }
+      #jogo-do-mix .menu .song .music {
+        font-family: 'roboto-bold';
+        margin-left: 10px; }
+      #jogo-do-mix .menu .song:after {
+        content: '';
+        height: 2px;
+        width: 10px;
+        transition: width .3s;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateY(-50%);
+        background-color: #533019;
+        pointer-events: none;
+        transform-origin: center; }
+        @media (min-width: 1000px) {
+          #jogo-do-mix .menu .song:after {
+            left: 50%;
+            width: 0px; } }
+      #jogo-do-mix .menu .song:hover {
+        color: #FCCC10; }
+        #jogo-do-mix .menu .song:hover:after {
+          width: 10px;
+          background-color: #FCCC10; }
+      #jogo-do-mix .menu .song.active {
+        color: #FCCC10; }
+        #jogo-do-mix .menu .song.active:after {
+          width: 10px;
+          background-color: #FCCC10; }

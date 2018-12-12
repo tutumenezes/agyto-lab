@@ -1,0 +1,81 @@
+.controls {
+	font-size: 14px;
+	width: 100%;
+	@media(min-width: 500px) {
+    margin: 0 10px 0 0;
+  }
+  @media(min-width: 900px) { 
+  	width: 40%;
+  }
+	ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		
+		@media(min-width: 500px) {
+	    flex-direction: column;
+	    height: calc(100% - 60px);
+	  }
+		li {
+			display: flex;
+			align-items: flex-start;
+			margin: 0 0 30px;
+			&:last-child{
+				margin: 0px;
+			}
+			@media(min-width: 500px) {
+		    flex-direction: column;  
+		  }
+			p { 
+				width: 35%;
+				color: $orange;
+				font-family: 'rubik-medium';
+				font-size: responsive(10, 13, 320, 1000);
+				@media(min-width: 500px) {
+			    width: 100%;
+			    margin: 0 0 5px;
+			  }
+			}
+			.volume {
+				position: relative;
+				height: $controls-size;
+				width: 100%;
+			}
+			.vol_bar {
+				width: 100%;
+				height: $controls-size;
+				@include center-top;
+				background-color: $light-gray;
+				.bar {
+					display: block;
+					height: $controls-size;
+					width: 100%;
+					background-color: $orange;
+					transition: width .2s;
+				}
+				.drag {
+					height: $controls-size;
+					width: $controls-size;
+					background-color: $medium-orange;
+					left: calc(100% - 15px);
+					@include center-top;
+					transition: left .2s;
+				}
+			}
+			input {
+				@include center-top;
+				width: 100%;
+				z-index: 9;
+				opacity: 0;
+			}
+
+			&.legend {
+        color: $orange;
+        font-size: responsive(12, 16, 320, 1000);
+        line-height: 1.2em;
+        font-family: 'rubik-medium';
+        margin: 0 0 10px;
+			}
+		}
+	}
+}
